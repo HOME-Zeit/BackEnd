@@ -10,6 +10,7 @@ import java.net.Socket;
  */
 public class ClientServerConTime 
 {
+    //Vorbereiten der notwendigen Variablen und Objekte
     private static BufferedReader bufferedReader;
     private static Socket socket;
     private static String inputLine;
@@ -19,12 +20,14 @@ public class ClientServerConTime
     {
         try
         {
+            //start der übertragung - Einfacher Empfang von Daten über BufferedReader
             socket = new Socket("localhost",55303);
             bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             while((inputLine = bufferedReader.readLine())!=null)
                 returnString = inputLine;
             bufferedReader.close();
             socket.close();
+            //ende der übertragung
         }
         catch(Exception e)
         {
@@ -37,12 +40,14 @@ public class ClientServerConTime
     {
         try
         {
+            //start der übertragung - Einfacher Empfang von Daten über BufferedReader
             socket = new Socket("localhost",55302);
             bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             while((inputLine = bufferedReader.readLine())!=null)
                 returnString = inputLine;
             bufferedReader.close();
             socket.close();
+            //ende der übertragung
         }
         catch(Exception e)
         {
@@ -55,18 +60,20 @@ public class ClientServerConTime
     {
         try
         {
+            //start der übertragung - Einfacher Empfang von Daten über BufferedReader
             socket = new Socket("localhost",55301);
             bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             while((inputLine = bufferedReader.readLine())!=null)
                 returnString = inputLine;
             bufferedReader.close();
             socket.close();
+            //ende der übertragung
         }
         catch(Exception e)
         {
             System.out.println(e+"\n!Socket Problem!");
         }
-        
+        //Empfangenen String auf long parsen vor der Rückgabe
         return Long.parseLong(returnString,10);
     }
 }
