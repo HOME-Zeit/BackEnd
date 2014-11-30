@@ -50,3 +50,4 @@ public class TimeLoopSec extends Thread
         }
     }
 }
+//TimeLoopClk.java für comments, da ähnlicher Aufbau
