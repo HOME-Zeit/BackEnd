@@ -54,3 +54,4 @@ public class DBLoopNumber extends Thread
         }
     }
 }
+//DBLoopMinor.java für comments, da ähnliche funktionsweise
