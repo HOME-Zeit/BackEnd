@@ -8,16 +8,24 @@ import datenbank.*;
  */
 public class UpdateDB 
 {
+    //Anfrage des Servers an die Datenbank über eine Änderung zum Thema "neue Programminformation anhängen"
+    //ÜbergabeParameter 1.die notwendige Programminformation 2.true or false für rückgabe mit oder ohne Exception von der Datenbank
     public static void updateAppend(Programminformation p, boolean truefalse)
     {
         //TODO append given file
         Datenbank.eintragen(p,truefalse);
     }
+    
+    //Anfrage des Servers an die Datenbank über eine Änderung zum Thema "bestehende Programminformation löschen"
+    //ÜbergabeParameter 1.die notwendige Programminformation 2.true or false für rückgabe mit oder ohne Exception von der Datenbank
     public static void updateDelete(Programminformation p, boolean truefalse)
     {
         //TODO delete selected file
         Datenbank.loeschen(p,truefalse);
     }
+    
+    //Anfrage des Servers an die Datenbank über eine Änderung zum Thema "bestehende Programminformation ändern"
+    //ÜbergabeParameter 1.die notwendige Programminformation 2.true or false für rückgabe mit oder ohne Exception von der Datenbank
     public static void updateRefactor(Programminformation p, boolean truefalse)
     {
         //TODO refactor selected file
