@@ -15,3 +15,4 @@ public class IntBool implements Serializable
         this.truefalse = truefalse;
     }
 }
+//Anlegen von Constructor um Übergabevariablen in ein einzelnes Objekt zu binden um die Übertragung zu erleichtern
