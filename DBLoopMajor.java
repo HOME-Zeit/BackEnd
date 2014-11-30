@@ -54,3 +54,4 @@ public class DBLoopMajor extends Thread
         }
     }
 }
+//DBLoopMinor.java für comments, da ähnliche funktionsweise
